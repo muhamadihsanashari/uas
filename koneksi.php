@@ -1,7 +1,14 @@
 <?php
-   $hostname  = "localhost";
-   $username  = "root";
-   $password  = "";
-   $dbname  = "db_covid";
-   $db = new mysqli($hostname, $username, $password, $dbname);
+	$host     = "localhost";
+	$user     = "root";
+	$pass 	  = "";
+	$name     = "db_uas";
+
+	$db = mysqli_connect($host, $user, $pass, $name);
+
+	if(!$db){
+		die("database tidak terkoneksi" . mysqli_connect_error());
+	}else{
+		echo "";
+	}
 ?>
