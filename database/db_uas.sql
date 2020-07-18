@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 17, 2020 at 12:22 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.4
+-- Waktu pembuatan: 18 Jul 2020 pada 13.25
+-- Versi server: 10.1.31-MariaDB
+-- Versi PHP: 7.2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `uas_web2`
+-- Database: `db_uas`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `data_pasien`
+-- Struktur dari tabel `data_pasien`
 --
 
 CREATE TABLE `data_pasien` (
@@ -37,17 +38,16 @@ CREATE TABLE `data_pasien` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `data_pasien`
+-- Dumping data untuk tabel `data_pasien`
 --
 
 INSERT INTO `data_pasien` (`id`, `area`, `positif`, `rawat`, `sembuh`, `meninggal`) VALUES
-(1, 'DKI Jakarta', 2902, 1769, 206, 257),
-(2, 'Banten', 25, 12, 34, 44);
+(5, 'DKI Jakarta', 15889, 5176, 9994, 719);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login`
+-- Struktur dari tabel `login`
 --
 
 CREATE TABLE `login` (
@@ -60,16 +60,20 @@ CREATE TABLE `login` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `login`
+-- Dumping data untuk tabel `login`
 --
 
 INSERT INTO `login` (`id_login`, `nama`, `nim`, `username`, `password`, `level`) VALUES
-(1, 'abi bayu', 2016142219, 'abi', 'admin', 'admin');
+(1, 'Ihsan Ashari', 401469, 'ihsan', 'admin', 'admin'),
+(3, 'Muhamad Juliyanto', 142099, 'juli', 'admin', 'admin'),
+(4, 'Muhammad Dinul Fikri', 401427, 'dinul', 'admin', 'admin'),
+(5, 'Muhammad Saebani', 140323, 'saebani', 'admin', 'admin'),
+(6, 'Muhammad Yusron', 401462, 'yusron', 'admin', 'admin');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `provinsi`
+-- Struktur dari tabel `provinsi`
 --
 
 CREATE TABLE `provinsi` (
@@ -78,7 +82,7 @@ CREATE TABLE `provinsi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `provinsi`
+-- Dumping data untuk tabel `provinsi`
 --
 
 INSERT INTO `provinsi` (`id_prov`, `nama`) VALUES
@@ -122,38 +126,38 @@ INSERT INTO `provinsi` (`id_prov`, `nama`) VALUES
 --
 
 --
--- Indexes for table `data_pasien`
+-- Indeks untuk tabel `data_pasien`
 --
 ALTER TABLE `data_pasien`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `login`
+-- Indeks untuk tabel `login`
 --
 ALTER TABLE `login`
   ADD PRIMARY KEY (`id_login`);
 
 --
--- Indexes for table `provinsi`
+-- Indeks untuk tabel `provinsi`
 --
 ALTER TABLE `provinsi`
   ADD PRIMARY KEY (`id_prov`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `data_pasien`
+-- AUTO_INCREMENT untuk tabel `data_pasien`
 --
 ALTER TABLE `data_pasien`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `login`
+-- AUTO_INCREMENT untuk tabel `login`
 --
 ALTER TABLE `login`
-  MODIFY `id_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
